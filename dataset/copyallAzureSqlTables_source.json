@@ -1,0 +1,13 @@
+{
+	"name": "copyallAzureSqlTables_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "source_AzureSqlDatabaseproject_linked_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "project-data-factoryy",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "703ba3c1-d16d-4320-9d83-90a9e4a4ece5",
+		"tenantId": "18f27607-bd09-4523-a4f7-9ff1134c0862"
+	}
+}
