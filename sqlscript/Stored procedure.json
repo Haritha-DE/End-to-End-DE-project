@@ -1,0 +1,17 @@
+{
+	"name": "Stored procedure",
+	"properties": {
+		"content": {
+			"query": "USE gold_db\nGO\n\nCREATE or Alter PROC createsqlserverlessView_gold @Viewname NVARCHAR(100)\nAS\nBEGIN\nDECLARE @statement VARCHAR(MAX)\n       set @statement = N'CREATE OR ALTER View ' + @Viewname + ' AS \n           Select * from \n           OPENROWSET(\n            BULK ''https://projectgenlake2.dfs.core.windows.net/gold/SalesLT/' + @Viewname + '/'',\n            Format=''DELTA''\n           )as [result]\n        '\n    \n\nEXEC (@statement)\n\nEND\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
